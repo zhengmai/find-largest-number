@@ -1,4 +1,5 @@
-var numbers = [23, 56, 12, 93, 50, 67, 34, 78];
+
+var numbers = [23, 56, 12, 93, 45, 67, 34, 78];
 
 function findLargestNumber(arr) {
     if (arr.length === 0) {
@@ -16,5 +17,13 @@ function findLargestNumber(arr) {
     return largestNumber;
 }
 
-var largestNumber = findLargestNumber(numbers);
-console.log("The largest number is: " + largestNumber);
+function showLargestNumber() {
+    var largestNumber = findLargestNumber(numbers);
+    var resultElement = document.getElementById("result");
+
+    if (largestNumber !== null) {
+        resultElement.textContent = "The largest number is: " + largestNumber;
+    } else {
+        resultElement.textContent = "The array is empty.";
+    }
+}
